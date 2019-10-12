@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IWU Phages DB</title>
+	<link rel="stylesheet" href="/stylesheets/app.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<script>
+	function myFunction() {
+	    // Declare variables
+	    var input, filter, ul, li, a, i;
+	    input = document.getElementById('myInput');
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById("myUL");
+	    li = ul.getElementsByTagName('li');
+	
+	    // Loop through all list items, and hide those who don't match the search query
+	    for (i = 0; i < li.length; i++) {
+	        a = li[i].getElementsByTagName("a")[0];
+	        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	            li[i].style.display = "";
+	        } else {
+	            li[i].style.display = "none";
+	        }
+	    }
+	}
+	</script>
+	
+	<nav class="navbar navbar-default" id="header_title"> <!-- class="navbar navbar-default"  topbar-wrap-->
+	  <!-- <div class="container"> -->
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header" id="topbar-container">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><img alt="Brand" class="brand_img" src="https://www.iwu.edu/identity/resources/illinois-wesleyan-university-stack-342.png">
+	      </a>
+	    </div>
+	    <!-- https://pbs.twimg.com/profile_images/914850237264560128/aVI9mKJM_400x400.jpg -->
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse navbar-left" id="bs-example-navbar-collapse-1">
+	    	<ul class="nav navbar-nav">
+		        <li><a id="nav_text" href="/"><i class="fas fa-home"></i> Home</a></li>
+		        <li><a id="nav_text" href="/about">About The Database</a></li>
+			    <li class="dropdown">
+			        <a id="nav_text" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Phages<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			            <li><a id="nav_text" href="/phages/new">Add Phages</a></li>
+			            <li><a id="nav_text" href="/phages/modify">Modify Phages</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a id="nav_text" href="/phages">View Database</a></li>
+			        </ul>
+			    </li>
+		        <li><a id="nav_text" href="/supplementalinfo">Supplemental Info</a></li>
+		     </ul>
+			</div>
+				<ul class="nav navbar-nav navbar-right" id="header_user">
+					<% if(!currentUser) { %>
+						<li><a id="nav_text" href="/login"><i class="far fa-address-card"></i> Login</a></li>
+						<li><a id="nav_text" href="/register"><i class="fas fa-user-plus"></i> Sign-Up</a></li>
+					<% } else { %>
+						<li><a id="nav_text" href="#">Signed in as: <strong id="username"><%= currentUser.username %></strong></a></li>
+						<li><a id="nav_text" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+					<% } %>
+					
+				</ul>
+	    <!-- /.navbar-collapse -->
+	  <!-- </div> --><!-- /.container-fluid -->
+	</nav>

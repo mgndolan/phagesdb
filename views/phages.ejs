@@ -1,0 +1,53 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="jumbotron">
+
+            <h1>Welcome to IWUDB!</h1><center>
+            <p>View our phages by searching below: </p>
+            <p>
+
+<div class="row" style="display:flex; flex-wrap: wrap; text-align: center;">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for phage.."></input> <!--Recently Added - Searchbar-->
+    <ul id="myUL">
+
+    <div class="adjustable">
+        <% phages.forEach(function(phages){ %> 
+        
+          <li class="phageThumbs">
+           <div class="phageThumbs">
+              <div class="thumbnail phageThumbs">
+                <img src="<%= phages.phageimage %>">
+                <div class="caption">
+                  <a href="/phages/<%= phages._id %>" class="btn btn-primary" role="button"><%= phages.phagename %></a>
+  
+                </div>
+              </div>
+            </div>
+          </li>
+
+       <% }); %>
+    </div>  
+</div>
+
+
+                <!--<ul id="myUL">-->
+                <!--  <li><a href="#">Adele</a></li>-->
+                <!--  <li><a href="#">Agnes</a></li>-->
+                
+                <!--  <li><a href="#">Billy</a></li>-->
+                <!--  <li><a href="#">Bob</a></li>-->
+                
+                <!--  <li><a href="#">Calvin</a></li>-->
+                <!--  <li><a href="#">Christina</a></li>-->
+                <!--  <li><a href="#">Cindy</a></li>-->
+                <!--</ul>-->
+            </p>
+             <a class="btn btn-primary btn-lg" href="/phages/new">
+                    Add New Phage
+                </a>
+            </center>
+        
+    </div>
+</div>
+<% include partials/footer %>

@@ -1,0 +1,202 @@
+.brand_img {
+		width: 120px;
+		height: 25px;
+	}
+	
+#nav_text {
+		color: rgb(12,94,64);
+	}
+
+.mainH1 {
+		color: rgb(12,94,64);
+		text-align: center;
+		border-bottom: 1px solid rgb(188, 214, 198);
+		padding-bottom: 30px;
+	}
+	
+.subH1 {
+		color: rgb(12,94,64);
+		text-align: center;
+		border-bottom: 1px solid rgb(188, 214, 198);
+		border-top: 1px solid rgb(188, 214, 198);
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	
+p,li {
+		color: rgb(12,94,64);
+	}
+
+	  
+.formTable {
+		margin: 2% 0 2% 0;
+		border: 2px solid rgb(12,94,64);
+		border-top-width: 2px;
+		padding: 5px;
+		background-color: rgb(188, 214, 198);
+		box-shadow: 0 5px 7px 0 rgba(0,0,0,.5);
+		text-align: left;
+	}
+	
+.formTable label {
+		display: inline-block;
+		text-align: right;
+	    width: 180px;
+	    padding: 5px;
+	    padding-right: 15px;
+	    padding-top: 15px;
+	  	padding-bottom: 15px;
+	}
+	
+body {
+		border-color: rgb(12,94,64); /*Titan green*/
+		border-width: 5px;
+		border-style: solid;
+		margin: 2.5%;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		background-image: url(https://images.unsplash.com/27/beautiful-soil.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b33aef4cb61a257f94b95f1020969e0b&auto=format&fit=crop&w=2448&q=80);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+nav {
+	   box-shadow: 0 5px 7px 0 rgba(0,0,0,.5);
+	   background-color: rgb(228, 231, 231);
+	}
+.container {
+		box-shadow: 0 5px 7px 0 rgba(0,0,0,.5);
+	}
+	
+#header_title {
+	/*margin-left: 5%;*/
+	background-color: rgb(228, 231, 231);
+} 
+
+#header_user {
+	margin-right: 5%;
+}
+
+#username {
+	color: blue;
+}
+	
+#break_container {
+		border-bottom: 1px solid gray;
+		padding-bottom: 45px;
+	}
+	
+th {
+	  border-bottom: 1px solid rgb(12,94,64);
+	  width: 0;
+	}
+	
+td {
+	  border-bottom: 1px solid rgb(12,94,64);
+	 }
+	
+.button {
+	  border-radius: 4px;
+	  background-color: #1a5638;
+	  border: none;
+	  color: #FFFFFF;
+	  text-align: center;
+	  font-size: 12px;
+	  padding: 10px;
+	  width: 85px;
+	  transition: all 0.5s;
+	  cursor: pointer;
+	  margin: 5px;
+	}
+	
+.button span {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.5s;
+	}
+	
+.button span:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  right: -20px;
+	  transition: 0.5s;
+	}
+	
+.button:hover span {
+	  padding-right: 20px;
+	}
+	
+.button:hover span:after {
+	  opacity: 1;
+	  right: 0;
+	}
+	
+.fas fa-home {
+	  color: rgb(12,94,64);
+	}
+#myInput {
+    /*background-image: ; Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+.subhead {
+	background-color: rgb(206, 206, 208);
+}
+
+#wrap {
+	/*background-color: rgb(228, 231, 231);*/
+	margin-bottom: 0;
+	padding-bottom: 0;
+	color: rgb(12,94,64);
+}
+
+#footer_title {
+	margin-left: 5%;
+	color: rgb(12,94,64);
+}
+
+#footer_search {
+	padding-top: 9px;
+	margin-right: 5%;
+}
+
+.adjustable {
+	column-count: 4;
+	column-gap: 1em;
+}
+
+.phageThumbs {
+	display: inline-block;
+	margin: 0 0 1em;
+	width: 100%;
+}

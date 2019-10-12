@@ -1,0 +1,44 @@
+<% include partials/header %>
+
+<div class="container">
+	<div class="jumbotron">
+    <div class="row">
+        <center>
+            <h1>Login</h1>
+            <p>It is important to keep this information safe, which is why it is 
+            necessary to have an account. Please fill out the following fields below. 
+            If you do not have an account, please sign-up and wait for confirmation from
+            an IWU SEA-Phages admin.</p>
+            <p>If you have any questions or troubleshooting errors while logging into
+            your account, please contact Dr. Bollivar, Dr.Alvey or Megan Dolan at mdolan1@iwu.edu.
+            </p>
+        </center>
+        <div class="alert alert-danger" role="alert">
+            <center>Sorry, your password was incorrect. Please try again. </center>
+        </div>
+        
+        <div style="width: 30%; margin: 30px auto;">
+        <form action="/login" method="POST">
+            <!--<input type="text" name="username" placeholder="username">-->
+            <!--<input type="password" name="password" placeholder="password">-->
+            <!--<button>Submit</button>-->
+            
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+          </div>
+        
+          <button type="submit" class="btn btn-primary">Submit</button>
+            
+        </form>
+        </div>
+    </div>
+    </div>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,183 @@
+<% include partials/header %>
+
+
+<div class="container">
+    <div class="jumbotron">
+    <div class="row">
+        <center><h1>All About <span style="color: rgb(12,94,64);"><%=phages.phagename%></span></h1></center>
+        <center><div class="container thumbnail"><img src="<%= phages.phageimage %>"></div></center>
+
+        
+        <div style="width: 70%; margin: 10px auto;">
+        <table class="table table-striped formTable">
+            	<tr>
+            	    <td class="subhead" colspan="2"><center><strong>Discovery Information</strong></center></td>
+            	</tr>
+            	<tr>
+        	       <td>Phage's Name: </td>
+        	       <td><%=phages.phagename%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Google Doc Folder with more Images: </td>
+        	       <!-- if (phages.googledocimages == "/") {%>-->
+        	       <!--<td></td>-->
+        	       <!-- } else { %>-->
+        	       <td><a href="<%=phages.googledocimages%>"><%=phages.phagename%></a></td>
+        	       <!-- } %>-->
+        	   </tr>
+        	   <tr>
+        	       <td>Finder's Name: </td>
+        	       <td><%=phages.foundby%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Created by User: </td>
+        	       <td><%=phages.author.username%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Year Found: </td>
+        	       <td><%=phages.yearfound%></td>
+        	   </tr>
+        	   	<tr>
+        	       <td>City Found: </td>
+        	       <td><%=phages.cityfound%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>State Found: </td>
+        	       <td><%=phages.statefound%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Country Found: </td>
+        	       <td><%=phages.countryfoundy%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>GPS Latitude: </td>
+        	       <td><%=phages.gpslat%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>GPS Longitude: </td>
+        	       <td><%=phages.gpslong%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Isolation Host:</td>
+        	       <td><%=phages.isolationhost%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>From Enriched Soil?</td>
+        	       <td><%=phages.soilsample%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Phage Discovery Notes: </td>
+        	       <td><%=phages.phagediscovery%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Phage Naming Notes: </td>
+        	       <td><%=phages.phagenaming%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Isolation Temperature: </td>
+        	       <td><%=phages.isotemp%></td>
+        	   </tr>
+        	   <tr>
+        	       <td class="subhead" colspan="2"><center><strong>Sequencing Information</strong></center></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Sequencing Complete? </td>
+        	       <td><%=phages.seqcomplete%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Sequencing Facility: </td>
+        	       <td><%=phages.seqfacility%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Sequencing Method: </td>
+        	       <td><%=phages.seqmethod%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Genome Length(bp): </td>
+        	       <td><%=phages.genomelength%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Characteristic of Genome End: </td>
+        	       <td><%=phages.genomeend%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Overhang Length(bp): </td>
+        	       <td><%=phages.overhanglength%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Overhang Sequence: </td>
+        	       <td><%=phages.overhangseq%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>GC Content: </td>
+        	       <td><%=phages.gccontent%></td>
+        	   </tr>
+        	   <tr>
+        	       <td class="subhead" colspan="2"><center><strong>Characterization</strong></center></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Cluster: </td>
+        	       <td><%=phages.cluster%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Cluster Life Cycle: </td>
+        	       <td><%=phages.clusterlife%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Annotation Status: </td>
+        	       <td><%=phages.annotatestatus%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Plaque Morphology Notes: </td>
+        	       <td><%=phages.phagemorphology%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Morphotype: </td>
+        	       <td><%=phages.morphotype%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Has Been Phamerated? </td>
+        	       <td><%=phages.phamerated%></td>
+        	   </tr>
+        	   <tr>
+        	       <td class="subhead" colspan="2"><center><strong>Publication Information</strong></center></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Uploaded to GenBank? </td>
+        	       <td><%=phages.genbank%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>GenBank Link: </td>
+        	       <td><%=phages.genbanklink%></td>
+        	   </tr>
+        	   <tr>
+        	       <td class="subhead" colspan="2"><center><strong>Archiving Information</strong></center></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Archiving Status: </td>
+        	       <td><%=phages.archivestatus%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Freezer Box #: </td>
+        	       <td><%=phages.freezerboxnum%></td>
+        	   </tr>
+        	   <tr>
+        	       <td>Freezer Box Grid #: </td>
+        	       <td><%=phages.freezerboxgridnum%></td>
+        	   </tr>
+        	   <tr>
+        	       <td class="subhead" colspan="2"><center><strong>Available Files</strong></center></td>
+        	   </tr>
+        
+        </table>
+        <br>
+            <a href="/phages">Go Back</a>
+                    </div>
+            
+        </div>
+        </div>
+        
+    </div>
+    </div>
+</div>
+<% include partials/footer %>

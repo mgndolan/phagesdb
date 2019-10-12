@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="jumbotron">
+
+            <h1>Modify a Phage</h1><center>
+            <p>Please choose a phage to modify:</p>
+    
+    
+<div class="row" style="display:flex; flex-wrap: wrap; text-align: center;">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for phage.."></input> <!--Recently Added - Searchbar-->
+    <ul id="myUL">
+      
+      <div class="adjustable">
+        <% phages.forEach(function(phages){ %> 
+        
+        <li class="phageThumbs">
+          <div class="phageThumbs">
+            <div class="thumbnail">
+              <img src="<%= phages.phageimage %>">
+              <div class="caption">
+                <a href="/phages/<%= phages._id %>/edit" class="btn btn-primary" role="button"><%= phages.phagename %></a>
+
+              </div>
+            </div>
+          </div>
+        </li>
+
+       <% }); %>
+       
+      </div>
+        
+    </div>
+            </p>
+             <a class="btn btn-primary btn-lg" href="/phages/new">
+                    Add New Phage
+                </a>
+            </center>
+        
+    </div>
+</div>
+<% include partials/footer %>
